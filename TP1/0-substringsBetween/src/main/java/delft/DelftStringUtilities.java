@@ -3,7 +3,7 @@ package delft;
 import java.util.ArrayList;
 import java.util.List;
 
-class DelftStringUtilities {
+public class DelftStringUtilities {
 
 	private DelftStringUtilities() {
 		// Override default constructor, to prevent it from getting considered in the
