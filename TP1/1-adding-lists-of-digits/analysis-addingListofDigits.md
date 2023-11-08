@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Specification-based Testing - Adding lists of digits
 
 ## 1. Goal, inputs and outputs
@@ -26,12 +27,23 @@
   - [6, 2]
 - Outputs
   - [1, 2, 6]
+=======
+# Specification-based Testing - [NOM EXERCICE]
+
+## 1. Goal, inputs and outputs
+- Goal:
+- Input domain:
+- Output domain:
+
+## 2. Explore the program
+>>>>>>> 4e4838a (TP1)
 
 ## 3. Identify input and output partitions
 
 ### Input partitions
 
 #### Individual inputs
+<<<<<<< HEAD
 - _left_ parameter category : it seems the array can contains any values. I see the specs mentionned empty & null cases. Here are the partitions :
   - null
   - empty
@@ -83,3 +95,13 @@ Test cases to execute only once and not combine them
 - T4 : _right_ is empty
 
 
+=======
+
+#### Combinations of input values
+
+### Output partitions
+
+## 4. Identify boundaries
+
+## 5. Select test cases
+>>>>>>> 4e4838a (TP1)
