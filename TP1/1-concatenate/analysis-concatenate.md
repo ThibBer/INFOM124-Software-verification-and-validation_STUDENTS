@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Specification-based Testing - Concatenate
 
 ## 1. Goal, inputs and outputs
@@ -21,12 +22,23 @@
   - ([10, 5.1, 8.4], [], [5, 4])
 - Outputs :
   - [10, 5.1, 8.4, 5, 4]
+=======
+# Specification-based Testing - [NOM EXERCICE]
+
+## 1. Goal, inputs and outputs
+- Goal:
+- Input domain:
+- Output domain:
+
+## 2. Explore the program
+>>>>>>> 4e4838a (TP1)
 
 ## 3. Identify input and output partitions
 
 ### Input partitions
 
 #### Individual inputs
+<<<<<<< HEAD
 - null
 - empty
 - double values
@@ -48,3 +60,13 @@ T1 : 1 argument null
 T2 : tous les arguments null
 T3 : X > 1 parameters
 T4 : 
+=======
+
+#### Combinations of input values
+
+### Output partitions
+
+## 4. Identify boundaries
+
+## 5. Select test cases
+>>>>>>> 4e4838a (TP1)
