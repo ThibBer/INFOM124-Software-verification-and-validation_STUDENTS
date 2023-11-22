@@ -1,47 +1,58 @@
 package com.gildedrose;
 
 public class Item {
-    private String name;
-    private int sellIn;
-    private int quality;
+    public static final String sulfuras = "Sulfuras";
+    public static final String conjured = "Conjured";
+    public static final String agedBrie = "Aged Brie";
+    public static final String backstagePasses = "Backstage passes";
+
+    public String name;
+    public int sellIn;
+    public int quality;
 
     public Item(String name, int sellIn, int quality) {
         this.name = name;
         this.sellIn = sellIn;
-        this.quality = quality;
+        this.quality = name.equals(sulfuras) ? quality : 80;
+    }
+    public String toString() {
+        return name + ", " + sellIn + ", " + quality;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getSellIn() {
-        return sellIn;
-    }
-
-    public int getQuality() {
-        return quality;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSellIn(int sellIn) {
-        this.sellIn = sellIn;
-    }
-
-    public void setQuality(int quality) {
-        if(quality < 0){
-            throw new IllegalArgumentException("Quantity can't be negative");
+    public void update(){
+        if(name.equals(sulfuras)){
+            return;
         }
 
+        if(sellIn > 0){
+            sellIn--;
+        }
 
-        this.quality = quality;
-    }
+        if((sellIn < 0 || name.equals(conjured)) && quality >= 2){
+            quality -= 2;
+        }
 
-    @Override
-   public String toString() {
-        return name + ", " + sellIn + ", " + quality;
+        if(name.equals(agedBrie) && quality < 50){
+            quality++;
+            return;
+        }
+
+        if(name.equals(backstagePasses)){
+            if(sellIn < 0){
+                quality = 0;
+                return;
+            }
+
+            if(quality < 50){
+                if(sellIn <= 5){
+                    quality += 3;
+                    return;
+                }
+
+                if(sellIn <= 10){
+                    quality += 2;
+                }
+            }
+        }
     }
 }
