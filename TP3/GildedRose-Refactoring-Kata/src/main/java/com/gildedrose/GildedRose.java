@@ -7,6 +7,10 @@ class GildedRose {
         this.items = items;
     }
 
+    public Item[] getItems() {
+        return items;
+    }
+
     public void updateQuality() {
         String agedBrie = "Aged Brie";
         String backstage = "Backstage passes to a TAFKAL80ETC concert";
