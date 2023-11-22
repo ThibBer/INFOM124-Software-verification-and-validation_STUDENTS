@@ -11,7 +11,36 @@ public class Item {
         this.quality = quality;
     }
 
-   @Override
+    public String getName() {
+        return name;
+    }
+
+    public int getSellIn() {
+        return sellIn;
+    }
+
+    public int getQuality() {
+        return quality;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSellIn(int sellIn) {
+        this.sellIn = sellIn;
+    }
+
+    public void setQuality(int quality) {
+        if(quality < 0){
+            throw new IllegalArgumentException("Quantity can't be negative");
+        }
+
+
+        this.quality = quality;
+    }
+
+    @Override
    public String toString() {
         return name + ", " + sellIn + ", " + quality;
     }
